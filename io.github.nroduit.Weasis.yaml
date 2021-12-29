@@ -14,6 +14,7 @@ finish-args:
   - --filesystem=home
   - --filesystem=/media
   - --filesystem=/run/media
+  - --filesystem=/tmp
   - --env=PATH=/app/jre/bin:/app/bin:/usr/bin
   - --env=JAVA_HOME=/app/jre
 modules:
