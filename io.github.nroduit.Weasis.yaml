@@ -43,6 +43,7 @@ modules:
       - install -D weasis.svg /app/share/icons/hicolor/scalable/apps/io.github.nroduit.Weasis.svg
       - install -D dicomizer.svg /app/share/icons/hicolor/scalable/apps/io.github.nroduit.Dicomizer.svg
       - install -D -t /app/share/applications/ io.github.nroduit.Weasis.desktop
+      - install -D -t /app/share/applications/ io.github.nroduit.Dicomizer.desktop
       - install -D -t /app/share/metainfo/ io.github.nroduit.Weasis.metainfo.xml
     sources:
       - type: archive
