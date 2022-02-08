@@ -47,8 +47,8 @@ modules:
       - install -D -t /app/share/metainfo/ io.github.nroduit.Weasis.metainfo.xml
     sources:
       - type: archive
-        url: https://github.com/nroduit/Weasis/archive/refs/tags/v3.8.0.tar.gz
-        sha256: 6a14102174a1cf1c8ade005ebc73c5107f5aebb6826de8ae81bed8d64c5fdb6d
+        url: https://github.com/nroduit/Weasis/archive/refs/tags/v3.8.1.tar.gz
+        sha256: f6c532ac249dd4e5a7b28e7988c3059b83be3e8088ffb7611a7df7464452dccd
       - type: patch
         # Otherwise it will want to download all the mvn dependencies
         path: patches/0001-remove-purge-from-weasis-distributions-pom.patch

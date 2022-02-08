@@ -65,6 +65,10 @@
   <developer_name>nroduit</developer_name>
   <content_rating type="oars-1.1"/>
   <releases>
+    <release version="3.8.1" date="2022-02-03"/>
+    <url>https://github.com/nroduit/Weasis/blob/master/CHANGELOG.md#v381-2022-02-03</url>
+  </releases>
+  <releases>
     <release version="3.8.0" date="2021-12-11"/>
   </releases>
 </component>
