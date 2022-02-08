@@ -129,7 +129,7 @@
 - type: file
   dest: .m2/repository/org/weasis/weasis-i18n-dist/3.0.0-SNAPSHOT/
   url: https://raw.github.com/nroduit/mvn-repo/master/org/weasis/weasis-i18n-dist/3.0.0-SNAPSHOT/weasis-i18n-dist-3.0.0-SNAPSHOT.zip
-  sha256: 707fa987bef6d2966ae19e7e6bb7410711e947999ffb165ce9b544947cb3ff8f
+  sha256: 752b1ce1e295835a65cdddbeeb359d042f3ffdbdcfae26c7cb0db50e79d9c435
 - type: file
   dest: .m2/repository/ant-contrib/ant-contrib/1.0b3/
   url: https://repo.maven.apache.org/maven2/ant-contrib/ant-contrib/1.0b3/ant-contrib-1.0b3.jar
