@@ -60,4 +60,6 @@ modules:
         path: weasis.svg
       - type: file
         path: dicomizer.svg
+      - type: file
+        path: io.github.nroduit.Dicomizer.desktop
       - maven-dependencies.yaml
