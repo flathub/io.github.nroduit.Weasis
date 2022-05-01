@@ -28,16 +28,16 @@ modules:
     buildsystem: simple
     build-options:
       append-path: /usr/lib/sdk/openjdk17/bin
+      build-args:
+        #- --share=network
       env:
         MAVEN_OPTS: -Dmaven.repo.local=.m2/repository
         JAVA_HOME: /usr/lib/sdk/openjdk17/jvm/openjdk-17
     build-commands:
-      - mvn clean install
-      - cd weasis-distributions && mvn clean package -Dportable=false -P compressXZ -Dmaven.repo.local=../.m2/repository
-      - unzip weasis-distributions/target/portable-dist/weasis-portable.zip
-      - sed -i 's/PACKAGE=YES/PACKAGE=NO/' weasis-distributions/script/package-weasis.sh
-      - sed -i 's/curl.*/#&/' weasis-distributions/script/package-weasis.sh
-      - weasis-distributions/script/package-weasis.sh --input . --output tmp --jdk ${JAVA_HOME}
+      - mvn -B clean install
+      - mvn -B -Dmaven.repo.local=.m2/repository -P compressXZ,-purgeI18nPackage -f weasis-distributions clean package
+      - unzip weasis-distributions/target/native-dist/weasis-native.zip -d weasis-distributions/target/native-dist/weasis-native
+      - weasis-distributions/script/package-weasis.sh --output tmp --no-installer --jdk ${JAVA_HOME}
       - mv tmp/Weasis/bin /app/
       - mv tmp/Weasis/lib /app/
       - install -D weasis.svg /app/share/icons/hicolor/scalable/apps/io.github.nroduit.Weasis.svg
@@ -47,11 +47,8 @@ modules:
       - install -D -t /app/share/metainfo/ io.github.nroduit.Weasis.metainfo.xml
     sources:
       - type: archive
-        url: https://github.com/nroduit/Weasis/archive/refs/tags/v3.8.1.tar.gz
-        sha256: f6c532ac249dd4e5a7b28e7988c3059b83be3e8088ffb7611a7df7464452dccd
-      - type: patch
-        # Otherwise it will want to download all the mvn dependencies
-        path: patches/0001-remove-purge-from-weasis-distributions-pom.patch
+        url: https://github.com/nroduit/Weasis/archive/refs/tags/v4.0.0-rc.tar.gz
+        sha256: 2238abaa1b8b866df4701971c5956c71ed70731abe95324a848463dc0f78118a
       - type: file
         path: io.github.nroduit.Weasis.desktop
       - type: file
