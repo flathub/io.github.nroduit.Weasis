@@ -15,8 +15,8 @@ finish-args:
   - --filesystem=/media
   - --filesystem=/run/media
   - --filesystem=/tmp
-  - --env=PATH=/app/jre/bin:/app/bin:/usr/bin
-  - --env=JAVA_HOME=/app/jre
+  - --env=PATH=/app/bin:/usr/bin
+
 modules:
 
   # JDK for compiling Weasis, requires at least java 17
