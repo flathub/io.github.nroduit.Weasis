@@ -23,7 +23,7 @@ modules:
   - name: openjdk
     buildsystem: simple
     build-commands:
-      - /usr/lib/sdk/openjdk17/install.sh
+      - /usr/lib/sdk/openjdk17/enable.sh
 
   - name: weasis
     buildsystem: simple
