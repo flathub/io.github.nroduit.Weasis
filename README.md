@@ -45,3 +45,20 @@ flatpak-builder --user --arch x86_64 --build-only --force-clean --keep-build-dir
 ```bash
 flatpak-builder --user --arch x86_64 --force-clean --install-deps-from=flathub build io.github.nroduit.Weasis.yaml
 ```
+
+## Using the Flathub repository
+
+To install applications that are hosted on Flathub, use the following:
+```
+flatpak remote-add flathub https://flathub.org/repo/flathub.flatpakrepo
+flatpak install flathub io.github.nroduit.Weasis
+```
+
+To install applications from the beta branch, use the following:
+```
+flatpak remote-add flathub-beta https://flathub.org/beta-repo/flathub-beta.flatpakrepo
+flatpak install flathub-beta io.github.nroduit.Weasis
+flatpak run io.github.nroduit.Weasis//beta
+```
+
+For more information and more applications see https://flathub.org
