@@ -19,6 +19,7 @@ finish-args:
   - --env=JAVA_HOME=/app/jre
 modules:
 
+  # JDK for compiling Weasis, requires at least java 17
   - name: openjdk
     buildsystem: simple
     build-commands:
@@ -34,10 +35,11 @@ modules:
         MAVEN_OPTS: -Dmaven.repo.local=.m2/repository
         JAVA_HOME: /usr/lib/sdk/openjdk17/jvm/openjdk-17
     build-commands:
+      - tar xvfz runtime-jdk.tar.gz --transform 's!^[^/]*!java-runtime!'
       - mvn -B clean install
       - mvn -B -Dmaven.repo.local=.m2/repository -P compressXZ,-purgeI18nPackage -f weasis-distributions clean package
       - unzip weasis-distributions/target/native-dist/weasis-native.zip -d weasis-distributions/target/native-dist/weasis-native
-      - weasis-distributions/script/package-weasis.sh --output tmp --no-installer --jdk ${JAVA_HOME}
+      - weasis-distributions/script/package-weasis.sh --output tmp --no-installer --jdk java-runtime
       - mv tmp/Weasis/bin /app/
       - mv tmp/Weasis/lib /app/
       - install -D weasis.svg /app/share/icons/hicolor/scalable/apps/io.github.nroduit.Weasis.svg
@@ -59,4 +61,22 @@ modules:
         path: dicomizer.svg
       - type: file
         path: io.github.nroduit.Weasis.Dicomizer.desktop
+      - type: file
+        only-arches:
+          - x86_64
+        url: https://github.com/adoptium/temurin18-binaries/releases/download/jdk-18.0.1%2B10/OpenJDK18U-jdk_x64_linux_hotspot_18.0.1_10.tar.gz
+        sha256: 16b1d9d75f22c157af04a1fd9c664324c7f4b5163c022b382a2f2e8897c1b0a2
+        dest-filename: runtime-jdk.tar.gz
+      - type: file
+        only-arches:
+          - arm
+        url: https://github.com/adoptium/temurin18-binaries/releases/download/jdk-18.0.1%2B10/OpenJDK18U-jdk_arm_linux_hotspot_18.0.1_10.tar.gz
+        dest-filename: runtime-jdk.tar.gz
+        sha512: 0ddec3c165ab0b662a57a845db3fdaeb840660b493f164696b03df76aadf61c8
+      - type: file
+        only-arches:
+          - aarch64
+        url: https://github.com/adoptium/temurin18-binaries/releases/download/jdk-18.0.1%2B10/OpenJDK18U-jdk_aarch64_linux_hotspot_18.0.1_10.tar.gz
+        dest-filename: runtime-jdk.tar.gz
+        sha512: 37ceaf232a85cce46bcccfd71839854e8b14bf3160e7ef72a676b9cae45ee8af
       - maven-dependencies.yaml

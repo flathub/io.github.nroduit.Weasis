@@ -117,7 +117,7 @@
 - type: file
   dest: .m2/repository/org/weasis/weasis-i18n-dist/3.0.0-SNAPSHOT/
   url: https://raw.github.com/nroduit/mvn-repo/master/org/weasis/weasis-i18n-dist/3.0.0-SNAPSHOT/weasis-i18n-dist-3.0.0-SNAPSHOT.zip
-  sha256: 6b46a6a4b0817d7d186243738c15d9a92eaf37f34423eb29cc9086d6bbad5270
+  sha256: a7d9dfc5ac5b3a1be55c710845f5bb889d7670578c935d3a55a208807c699428
 - type: file
   dest: .m2/repository/antlr/antlr/2.7.2/
   url: https://repo.maven.apache.org/maven2/antlr/antlr/2.7.2/antlr-2.7.2.pom
