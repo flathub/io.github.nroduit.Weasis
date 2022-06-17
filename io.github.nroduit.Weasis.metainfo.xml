@@ -7,7 +7,7 @@
   <summary>A free/libre/open medical DICOM viewer</summary>
   <description>
     <p>
-      Weasis is a multipurpose DICOM viewer with a highly modular architecture. It is a very popular clinical viewer used in healthcare by hospitals, health networks, multicenter research trials, and patients.
+      Weasis is a multipurpose standalone and web-based DICOM viewer with a highly modular architecture. It is a very popular clinical viewer used in healthcare by hospitals, health networks, multicenter research trials, and patients.
     </p>
     <ul>
       <li>Flexible integration to PACS, VNA, RIS, HIS or PHR</li>
@@ -45,6 +45,9 @@
   <developer_name>nroduit</developer_name>
   <content_rating type="oars-1.1"/>
   <releases>
+    <release version="4.0.1" date="2022-06-17">
+      <description>https://github.com/nroduit/Weasis/releases/tag/v4.0.1</description>
+    </release>
     <release version="4.0.0-RC" date="2022-04-24">
       <description>https://github.com/nroduit/Weasis/releases/tag/v4.0.0-rc</description>
     </release>

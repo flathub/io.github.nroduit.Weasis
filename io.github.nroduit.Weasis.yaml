@@ -3,8 +3,6 @@ runtime: org.freedesktop.Sdk
 runtime-version: '21.08'
 sdk: org.freedesktop.Sdk
 base-version: '21.08'
-sdk-extensions: 
-  - org.freedesktop.Sdk.Extension.openjdk17
 command: Weasis
 finish-args:
   - --share=ipc
@@ -19,26 +17,15 @@ finish-args:
 
 modules:
 
-  # JDK for compiling Weasis, requires at least java 17
-  - name: openjdk
-    buildsystem: simple
-    build-commands:
-      - /usr/lib/sdk/openjdk17/enable.sh
-
   - name: weasis
     buildsystem: simple
     build-options:
-      append-path: /usr/lib/sdk/openjdk17/bin
       build-args:
         #- --share=network
-      env:
-        MAVEN_OPTS: -Dmaven.repo.local=.m2/repository
-        JAVA_HOME: /usr/lib/sdk/openjdk17/jvm/openjdk-17
     build-commands:
       - tar xvfz runtime-jdk.tar.gz --transform 's!^[^/]*!java-runtime!'
-      - mvn -B clean install
-      - mvn -B -Dmaven.repo.local=.m2/repository -P compressXZ,-purgeI18nPackage -f weasis-distributions clean package
-      - unzip weasis-distributions/target/native-dist/weasis-native.zip -d weasis-distributions/target/native-dist/weasis-native
+      - mkdir -p weasis-distributions/target/native-dist/weasis-native
+      - unzip -o weasis-native.zip -d weasis-distributions/target/native-dist/weasis-native
       - weasis-distributions/script/package-weasis.sh --output tmp --no-installer --jdk java-runtime
       - mv tmp/Weasis/bin /app/
       - mv tmp/Weasis/lib /app/
@@ -48,9 +35,6 @@ modules:
       - install -D -t /app/share/applications/ io.github.nroduit.Weasis.Dicomizer.desktop
       - install -D -t /app/share/metainfo/ io.github.nroduit.Weasis.metainfo.xml
     sources:
-      - type: archive
-        url: https://github.com/nroduit/Weasis/archive/refs/tags/v4.0.0-rc.tar.gz
-        sha256: 2238abaa1b8b866df4701971c5956c71ed70731abe95324a848463dc0f78118a
       - type: file
         path: io.github.nroduit.Weasis.desktop
       - type: file
@@ -61,6 +45,12 @@ modules:
         path: dicomizer.svg
       - type: file
         path: io.github.nroduit.Weasis.Dicomizer.desktop
+      - type: archive
+        url: https://github.com/nroduit/Weasis/archive/refs/tags/v4.0.1.tar.gz
+        sha256: 12beb5a417a56fe407a0682c5a111e6029a1928c2a184b6c57702c05cde2b682
+      - type: file
+        url: https://github.com/nroduit/Weasis/releases/download/v4.0.1/weasis-native.zip
+        sha256: a51862888f03df9d15cb48f4ff4aa23ae01a176f3eb0997598cba6de7021e82b
       - type: file
         only-arches:
           - x86_64
@@ -69,14 +59,14 @@ modules:
         dest-filename: runtime-jdk.tar.gz
       - type: file
         only-arches:
-          - arm
-        url: https://github.com/adoptium/temurin18-binaries/releases/download/jdk-18.0.1%2B10/OpenJDK18U-jdk_arm_linux_hotspot_18.0.1_10.tar.gz
-        dest-filename: runtime-jdk.tar.gz
-        sha256: 0ddec3c165ab0b662a57a845db3fdaeb840660b493f164696b03df76aadf61c8
-      - type: file
-        only-arches:
           - aarch64
         url: https://github.com/adoptium/temurin18-binaries/releases/download/jdk-18.0.1%2B10/OpenJDK18U-jdk_aarch64_linux_hotspot_18.0.1_10.tar.gz
         dest-filename: runtime-jdk.tar.gz
         sha256: 37ceaf232a85cce46bcccfd71839854e8b14bf3160e7ef72a676b9cae45ee8af
-      - maven-dependencies.yaml
+      - type: file
+        only-arches:
+          - arm
+        url: https://github.com/adoptium/temurin18-binaries/releases/download/jdk-18.0.1%2B10/OpenJDK18U-jdk_arm_linux_hotspot_18.0.1_10.tar.gz
+        dest-filename: runtime-jdk.tar.gz
+        sha256: 0ddec3c165ab0b662a57a845db3fdaeb840660b493f164696b03df76aadf61c8
+

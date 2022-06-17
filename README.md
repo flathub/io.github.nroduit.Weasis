@@ -23,25 +23,8 @@ See [building documentation](https://docs.flatpak.org/en/latest/building.html)
 </release>
 ```
 
-### Update Maven dependencies
+### Build the image locally
 
-Prerequisites:
-```bash
-sudo apt install python3-natsort
-```
-Reference: https://github.com/flathub/com.tonikelope.MegaBasterd/pull/2#issue-505661844
-
-1. Edit Modules/Weasis in io.github.nroduit.Weasis.yaml:  uncomment `--share=network` line and comment `- maven-dependencies.yaml`
-2. Build command with Internet access
-```bash
-flatpak-builder --user --arch x86_64 --build-only --force-clean --keep-build-dirs --install-deps-from=flathub build io.github.nroduit.Weasis.yaml | grep Downloaded | grep -E -o 'https://.*(\ )' | awk '{print $1}' | tee urls
-```
-3. Command to build maven-dependencies.yaml from the inner Maven repository
-```bash
-./maven-generator.sh urls
-```
-4. Edit Modules/Weasis in io.github.nroduit.Weasis.yaml:  comment `--share=network` line and uncomment `- maven-dependencies.yaml`
-5. Build the image locally
 ```bash
 flatpak-builder --user --arch x86_64 --force-clean --install-deps-from=flathub build io.github.nroduit.Weasis.yaml
 ```
