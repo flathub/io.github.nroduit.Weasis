@@ -24,11 +24,10 @@ modules:
         #- --share=network
     build-commands:
       - tar xvfz runtime-jdk.tar.gz --transform 's!^[^/]*!java-runtime!'
-      - mkdir -p weasis-distributions/target/native-dist/weasis-native
-      - unzip -o weasis-native.zip -d weasis-distributions/target/native-dist/weasis-native
-      - weasis-distributions/script/package-weasis.sh --output tmp --no-installer --jdk java-runtime
-      - mv tmp/Weasis/bin /app/
-      - mv tmp/Weasis/lib /app/
+      - mkdir -p weasis-native
+      - unzip -o weasis-native.zip -d weasis-native
+      - weasis-native/build/script/package-weasis.sh --output tmp --no-installer --jdk java-runtime
+      - mv tmp/Weasis/* /app/
       - install -D weasis.svg /app/share/icons/hicolor/scalable/apps/io.github.nroduit.Weasis.svg
       - install -D dicomizer.svg /app/share/icons/hicolor/scalable/apps/io.github.nroduit.Weasis.Dicomizer.svg
       - install -D -t /app/share/applications/ io.github.nroduit.Weasis.desktop
@@ -45,28 +44,25 @@ modules:
         path: dicomizer.svg
       - type: file
         path: io.github.nroduit.Weasis.Dicomizer.desktop
-      - type: archive
-        url: https://github.com/nroduit/Weasis/archive/refs/tags/v4.0.1.tar.gz
-        sha256: 12beb5a417a56fe407a0682c5a111e6029a1928c2a184b6c57702c05cde2b682
       - type: file
-        url: https://github.com/nroduit/Weasis/releases/download/v4.0.1/weasis-native.zip
-        sha256: a51862888f03df9d15cb48f4ff4aa23ae01a176f3eb0997598cba6de7021e82b
+        url: https://github.com/nroduit/Weasis/releases/download/v4.0.2/weasis-native.zip
+        sha256: 0ae24e31c2e661a2bff38d245ee27f90cbf2b8931933af38e6319c80caa75460
       - type: file
         only-arches:
           - x86_64
-        url: https://github.com/adoptium/temurin18-binaries/releases/download/jdk-18.0.1%2B10/OpenJDK18U-jdk_x64_linux_hotspot_18.0.1_10.tar.gz
-        sha256: 16b1d9d75f22c157af04a1fd9c664324c7f4b5163c022b382a2f2e8897c1b0a2
+        url: https://github.com/adoptium/temurin18-binaries/releases/download/jdk-18.0.2%2B9/OpenJDK18U-jdk_x64_linux_hotspot_18.0.2_9.tar.gz
+        sha256: 5e5dbf6f1308829528778e00631ec83e252d90fc444503091e71a66465e88941
         dest-filename: runtime-jdk.tar.gz
       - type: file
         only-arches:
           - aarch64
-        url: https://github.com/adoptium/temurin18-binaries/releases/download/jdk-18.0.1%2B10/OpenJDK18U-jdk_aarch64_linux_hotspot_18.0.1_10.tar.gz
+        url: https://github.com/adoptium/temurin18-binaries/releases/download/jdk-18.0.2%2B9/OpenJDK18U-jdk_aarch64_linux_hotspot_18.0.2_9.tar.gz
         dest-filename: runtime-jdk.tar.gz
-        sha256: 37ceaf232a85cce46bcccfd71839854e8b14bf3160e7ef72a676b9cae45ee8af
+        sha256: f4aca720bfcea4df7f02b59de1f68648632070c492f210b9e41e69170ee5e48f
       - type: file
         only-arches:
           - arm
-        url: https://github.com/adoptium/temurin18-binaries/releases/download/jdk-18.0.1%2B10/OpenJDK18U-jdk_arm_linux_hotspot_18.0.1_10.tar.gz
+        url: https://github.com/adoptium/temurin18-binaries/releases/download/jdk-18.0.2%2B9/OpenJDK18U-jdk_arm_linux_hotspot_18.0.2_9.tar.gz
         dest-filename: runtime-jdk.tar.gz
-        sha256: 0ddec3c165ab0b662a57a845db3fdaeb840660b493f164696b03df76aadf61c8
+        sha256: 52ec0ddee9ff16397de2c9f614ff6b5464220bd5c3d705e8b89d28fd478feb60
 
