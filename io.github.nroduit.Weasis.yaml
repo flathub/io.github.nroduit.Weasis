@@ -46,7 +46,7 @@ modules:
         path: io.github.nroduit.Weasis.Dicomizer.desktop
       - type: file
         url: https://github.com/nroduit/Weasis/releases/download/v4.0.3/weasis-native.zip
-        sha256: 0ae24e31c2e661a2bff38d245ee27f90cbf2b8931933af38e6319c80caa75460
+        sha256: 3cfce172a29f38561e03651e43543a6c066e74d20cd33fbce8d0fe998c2c36e5
       # see jdk https://github.com/adoptium/containers/blob/main/19/jdk/ubuntu/focal/Dockerfile.releases.full
       - type: file
         only-arches:
