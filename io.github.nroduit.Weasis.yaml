@@ -1,8 +1,8 @@
 app-id: io.github.nroduit.Weasis
-runtime: org.freedesktop.Sdk
-runtime-version: '21.08'
+runtime: org.freedesktop.Platform
+runtime-version: '22.08'
 sdk: org.freedesktop.Sdk
-base-version: '21.08'
+base-version: '22.08'
 command: Weasis
 finish-args:
   - --share=ipc
@@ -24,11 +24,10 @@ modules:
         #- --share=network
     build-commands:
       - tar xvfz runtime-jdk.tar.gz --transform 's!^[^/]*!java-runtime!'
-      - mkdir -p weasis-distributions/target/native-dist/weasis-native
-      - unzip -o weasis-native.zip -d weasis-distributions/target/native-dist/weasis-native
-      - weasis-distributions/script/package-weasis.sh --output tmp --no-installer --jdk java-runtime
-      - mv tmp/Weasis/bin /app/
-      - mv tmp/Weasis/lib /app/
+      - mkdir -p weasis-native
+      - unzip -o weasis-native.zip -d weasis-native
+      - weasis-native/build/script/package-weasis.sh --output tmp --no-installer --jdk java-runtime
+      - mv tmp/Weasis/* /app/
       - install -D weasis.svg /app/share/icons/hicolor/scalable/apps/io.github.nroduit.Weasis.svg
       - install -D dicomizer.svg /app/share/icons/hicolor/scalable/apps/io.github.nroduit.Weasis.Dicomizer.svg
       - install -D -t /app/share/applications/ io.github.nroduit.Weasis.desktop
@@ -45,28 +44,26 @@ modules:
         path: dicomizer.svg
       - type: file
         path: io.github.nroduit.Weasis.Dicomizer.desktop
-      - type: archive
-        url: https://github.com/nroduit/Weasis/archive/refs/tags/v4.0.1.tar.gz
-        sha256: 12beb5a417a56fe407a0682c5a111e6029a1928c2a184b6c57702c05cde2b682
       - type: file
-        url: https://github.com/nroduit/Weasis/releases/download/v4.0.1/weasis-native.zip
-        sha256: a51862888f03df9d15cb48f4ff4aa23ae01a176f3eb0997598cba6de7021e82b
+        url: https://github.com/nroduit/Weasis/releases/download/v4.0.3/weasis-native.zip
+        sha256: 3cfce172a29f38561e03651e43543a6c066e74d20cd33fbce8d0fe998c2c36e5
+      # see jdk https://github.com/adoptium/containers/blob/main/19/jdk/ubuntu/focal/Dockerfile.releases.full
       - type: file
         only-arches:
           - x86_64
-        url: https://github.com/adoptium/temurin18-binaries/releases/download/jdk-18.0.1%2B10/OpenJDK18U-jdk_x64_linux_hotspot_18.0.1_10.tar.gz
-        sha256: 16b1d9d75f22c157af04a1fd9c664324c7f4b5163c022b382a2f2e8897c1b0a2
+        url: https://github.com/adoptium/temurin19-binaries/releases/download/jdk-19.0.1%2B10/OpenJDK19U-jdk_x64_linux_hotspot_19.0.1_10.tar.gz
+        sha256: 163da7ea140210bae97c6a4590c757858ab4520a78af0e3e33129863d4087552
         dest-filename: runtime-jdk.tar.gz
       - type: file
         only-arches:
           - aarch64
-        url: https://github.com/adoptium/temurin18-binaries/releases/download/jdk-18.0.1%2B10/OpenJDK18U-jdk_aarch64_linux_hotspot_18.0.1_10.tar.gz
+        url: https://github.com/adoptium/temurin19-binaries/releases/download/jdk-19.0.1%2B10/OpenJDK19U-jdk_aarch64_linux_hotspot_19.0.1_10.tar.gz
         dest-filename: runtime-jdk.tar.gz
-        sha256: 37ceaf232a85cce46bcccfd71839854e8b14bf3160e7ef72a676b9cae45ee8af
+        sha256: 5e8d7b3189364afd78d936bad140dbe1e7025d4b96d530ed5536d035c21afb7c
       - type: file
         only-arches:
           - arm
-        url: https://github.com/adoptium/temurin18-binaries/releases/download/jdk-18.0.1%2B10/OpenJDK18U-jdk_arm_linux_hotspot_18.0.1_10.tar.gz
+        url: https://github.com/adoptium/temurin19-binaries/releases/download/jdk-19.0.1%2B10/OpenJDK19U-jdk_arm_linux_hotspot_19.0.1_10.tar.gz
         dest-filename: runtime-jdk.tar.gz
-        sha256: 0ddec3c165ab0b662a57a845db3fdaeb840660b493f164696b03df76aadf61c8
+        sha256: 5f404ae08d7c49f22fe04c04ec39d7e7b17cae2007b9513ad1a7a1164174898b
 
