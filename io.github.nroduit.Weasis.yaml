@@ -1,14 +1,15 @@
 app-id: io.github.nroduit.Weasis
-runtime: org.freedesktop.Platform
-runtime-version: '22.08'
-sdk: org.freedesktop.Sdk
-base-version: '22.08'
+runtime: org.gnome.Platform
+runtime-version: "44"
+sdk: org.gnome.Sdk
 command: Weasis
 finish-args:
   - --share=ipc
-  - --socket=x11
-  - --device=dri
+  - --socket=fallback-x11
+  - --socket=wayland
+  - --socket=pulseaudio
   - --share=network
+  - --device=all
   - --filesystem=home
   - --filesystem=/media
   - --filesystem=/run/media
