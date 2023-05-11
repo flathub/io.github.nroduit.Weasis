@@ -45,25 +45,24 @@ modules:
       - type: file
         path: io.github.nroduit.Weasis.Dicomizer.desktop
       - type: file
-        url: https://github.com/nroduit/Weasis/releases/download/v4.0.3/weasis-native.zip
-        sha256: 3cfce172a29f38561e03651e43543a6c066e74d20cd33fbce8d0fe998c2c36e5
-      # see jdk https://github.com/adoptium/containers/blob/main/19/jdk/ubuntu/focal/Dockerfile.releases.full
+        url: https://github.com/nroduit/Weasis/releases/download/v4.1.0/weasis-native.zip
+        sha256: 3243a10c14f7bf467597f9b661129c561976cc78887448fb3a1f8ef72ecaf39f
       - type: file
         only-arches:
           - x86_64
-        url: https://github.com/adoptium/temurin19-binaries/releases/download/jdk-19.0.1%2B10/OpenJDK19U-jdk_x64_linux_hotspot_19.0.1_10.tar.gz
-        sha256: 163da7ea140210bae97c6a4590c757858ab4520a78af0e3e33129863d4087552
+        url: https://github.com/adoptium/temurin20-binaries/releases/download/jdk-20%2B36/OpenJDK20U-jdk_x64_linux_hotspot_20_36.tar.gz
+        sha256: fb6000faf47fffcda8caf01f60097d582728a6fffb6c1b85c8075c674f0c9281
         dest-filename: runtime-jdk.tar.gz
       - type: file
         only-arches:
           - aarch64
-        url: https://github.com/adoptium/temurin19-binaries/releases/download/jdk-19.0.1%2B10/OpenJDK19U-jdk_aarch64_linux_hotspot_19.0.1_10.tar.gz
+        url: https://github.com/adoptium/temurin20-binaries/releases/download/jdk-20%2B36/OpenJDK20U-jdk_aarch64_linux_hotspot_20_36.tar.gz
         dest-filename: runtime-jdk.tar.gz
-        sha256: 5e8d7b3189364afd78d936bad140dbe1e7025d4b96d530ed5536d035c21afb7c
+        sha256: 980156d37580bd6fec142e02900497984e94c4b819a0c0eb7ce790bfc7c7d920
       - type: file
         only-arches:
           - arm
-        url: https://github.com/adoptium/temurin19-binaries/releases/download/jdk-19.0.1%2B10/OpenJDK19U-jdk_arm_linux_hotspot_19.0.1_10.tar.gz
+        url: https://github.com/adoptium/temurin20-binaries/releases/download/jdk20u-2023-04-07-10-00-beta/OpenJDK20U-jdk_arm_linux_hotspot_2023-04-07-10-00.tar.gz
         dest-filename: runtime-jdk.tar.gz
-        sha256: 5f404ae08d7c49f22fe04c04ec39d7e7b17cae2007b9513ad1a7a1164174898b
+        sha256: 95528b5b2d2e48eca77f17a1705087ea926b551a3e25c0b84c19acf9235559f6
 
