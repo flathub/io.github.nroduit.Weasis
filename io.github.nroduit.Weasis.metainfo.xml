@@ -45,6 +45,9 @@
   <developer_name>nroduit</developer_name>
   <content_rating type="oars-1.1"/>
   <releases>
+    <release version="4.1.0" date="2023-05-22">
+      <description>https://github.com/nroduit/Weasis/releases/tag/v4.1.1</description>
+    </release>
     <release version="4.1.0" date="2023-05-08">
       <description>https://github.com/nroduit/Weasis/releases/tag/v4.1.0</description>
     </release>
