@@ -47,24 +47,24 @@ modules:
       - type: file
         path: io.github.nroduit.Weasis.Dicomizer.desktop
       - type: file
-        url: https://github.com/nroduit/Weasis/releases/download/v4.1.1/weasis-native.zip
-        sha256: f02b11803e7839f11f81f01612f0d2963a5c49b37b454f354bffb7dd815dedba
+        url: https://github.com/nroduit/Weasis/releases/download/v4.1.2/weasis-native.zip
+        sha256: d5c46352c8519437b60c184354363c9244a5bf709a8093ec31adc2f6668ec2bf
       - type: file
         only-arches:
           - x86_64
-        url: https://github.com/adoptium/temurin20-binaries/releases/download/jdk-20%2B36/OpenJDK20U-jdk_x64_linux_hotspot_20_36.tar.gz
-        sha256: fb6000faf47fffcda8caf01f60097d582728a6fffb6c1b85c8075c674f0c9281
+        url: https://github.com/adoptium/temurin20-binaries/releases/download/jdk-20.0.1%2B9/OpenJDK20U-jdk_x64_linux_hotspot_20.0.1_9.tar.gz
+        sha256: 43ad054f135a7894dc87ad5d10ad45d8e82846186515892acdbc17c2c5cd27e4
         dest-filename: runtime-jdk.tar.gz
       - type: file
         only-arches:
           - aarch64
-        url: https://github.com/adoptium/temurin20-binaries/releases/download/jdk-20%2B36/OpenJDK20U-jdk_aarch64_linux_hotspot_20_36.tar.gz
+        url: https://github.com/adoptium/temurin20-binaries/releases/download/jdk-20.0.1%2B9/OpenJDK20U-jdk_aarch64_linux_hotspot_20.0.1_9.tar.gz
         dest-filename: runtime-jdk.tar.gz
-        sha256: 980156d37580bd6fec142e02900497984e94c4b819a0c0eb7ce790bfc7c7d920
+        sha256: b16c0271899de1f0e277dc0398bfff11b54511765f104fa938929ac484dc926d
       - type: file
         only-arches:
           - arm
-        url: https://github.com/adoptium/temurin20-binaries/releases/download/jdk20u-2023-04-07-10-00-beta/OpenJDK20U-jdk_arm_linux_hotspot_2023-04-07-10-00.tar.gz
+        url: https://github.com/adoptium/temurin20-binaries/releases/download/jdk20u-2023-06-16-10-17-beta/OpenJDK20U-jdk_arm_linux_hotspot_2023-06-16-10-17.tar.gz
         dest-filename: runtime-jdk.tar.gz
-        sha256: 95528b5b2d2e48eca77f17a1705087ea926b551a3e25c0b84c19acf9235559f6
+        sha256: 2cc291c51ed0fae50bbf23ebaae29f1a623850781c0b5fd27e1e5b6b66b37287
 
