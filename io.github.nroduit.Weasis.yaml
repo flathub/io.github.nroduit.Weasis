@@ -1,8 +1,7 @@
 app-id: io.github.nroduit.Weasis
 runtime: org.freedesktop.Platform
-runtime-version: '22.08'
+runtime-version: '23.08'
 sdk: org.freedesktop.Sdk
-base-version: '22.08'
 command: Weasis
 finish-args:
   - --share=ipc
@@ -47,8 +46,8 @@ modules:
       - type: file
         path: io.github.nroduit.Weasis.Dicomizer.desktop
       - type: file
-        url: https://github.com/nroduit/Weasis/releases/download/v4.2.1/weasis-native.zip
-        sha256: 7bc334c50140142b6bb70f055ce3fb8f4a2d7e40e6b5f5282ce9aae8092438ad
+        url: https://github.com/nroduit/Weasis/releases/download/v4.3.0/weasis-native.zip
+        sha256: 583db2ae3cfee0cb069883eb4aeb1a181c4440359cc94a87646afa3f38fb465b
       - type: file
         only-arches:
           - x86_64
