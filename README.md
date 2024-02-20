@@ -44,4 +44,4 @@ flatpak install flathub-beta io.github.nroduit.Weasis
 flatpak run io.github.nroduit.Weasis//beta
 ```
 
-For more information and more applications see https://flathub.org
+For more information and more applications see https://flathub.org 
