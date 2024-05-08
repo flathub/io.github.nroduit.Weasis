@@ -46,18 +46,18 @@ modules:
       - type: file
         path: io.github.nroduit.Weasis.Dicomizer.desktop
       - type: file
-        url: https://github.com/nroduit/Weasis/releases/download/v4.3.0/weasis-native.zip
-        sha256: 583db2ae3cfee0cb069883eb4aeb1a181c4440359cc94a87646afa3f38fb465b
+        url: https://github.com/nroduit/Weasis/releases/download/v4.4.0/weasis-native.zip
+        sha256: c8d8c71e17e8abc3e29a4342b353a2e95a984dd8fc2ab3bb0bb59088fdbf61d9
       - type: file
         only-arches:
           - x86_64
-        url: https://github.com/adoptium/temurin21-binaries/releases/download/jdk-21.0.1%2B12/OpenJDK21U-jdk_x64_linux_hotspot_21.0.1_12.tar.gz
-        sha256: 1a6fa8abda4c5caed915cfbeeb176e7fbd12eb6b222f26e290ee45808b529aa1
+        url: https://github.com/adoptium/temurin21-binaries/releases/download/jdk-21.0.3%2B9/OpenJDK21U-jdk_x64_linux_hotspot_21.0.3_9.tar.gz
+        sha256: fffa52c22d797b715a962e6c8d11ec7d79b90dd819b5bc51d62137ea4b22a340
         dest-filename: runtime-jdk.tar.gz
       - type: file
         only-arches:
           - aarch64
-        url: https://github.com/adoptium/temurin21-binaries/releases/download/jdk-21.0.1%2B12/OpenJDK21U-jdk_aarch64_linux_hotspot_21.0.1_12.tar.gz
+        url: https://github.com/adoptium/temurin21-binaries/releases/download/jdk-21.0.3%2B9/OpenJDK21U-jdk_aarch64_linux_hotspot_21.0.3_9.tar.gz
         dest-filename: runtime-jdk.tar.gz
-        sha256: e184dc29a6712c1f78754ab36fb48866583665fa345324f1a79e569c064f95e9
+        sha256: 7d3ab0e8eba95bd682cfda8041c6cb6fa21e09d0d9131316fd7c96c78969de31
 
