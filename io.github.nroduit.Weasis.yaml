@@ -7,7 +7,10 @@ finish-args:
   - --share=ipc
   - --socket=pulseaudio
   - --share=network
+  - --socket=wayland
+  - --socket=x11
   - --device=all
+  - --filesystem=host
   - --filesystem=home
   - --filesystem=/media
   - --filesystem=/run/media
