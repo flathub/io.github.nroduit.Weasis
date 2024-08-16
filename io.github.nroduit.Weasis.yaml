@@ -10,9 +10,6 @@ finish-args:
   - --socket=x11
   - --device=all
   - --filesystem=host
-  - --filesystem=home
-  - --filesystem=/media
-  - --filesystem=/run/media
   - --filesystem=/tmp
   - --env=PATH=/app/bin:/usr/bin
 
