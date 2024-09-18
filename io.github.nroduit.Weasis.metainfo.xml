@@ -7,10 +7,11 @@
   <summary>A free/libre/open medical DICOM viewer</summary>
   <description>
     <p>
-      Weasis is a multipurpose standalone and web-based DICOM viewer with a highly modular architecture. It is a very popular clinical viewer used in healthcare by hospitals, health networks, multicenter research trials, and patients.
+      Weasis is a standalone and web-based software for visualizing images obtained from medical imaging devices. This free DICOM viewer is used in healthcare by hospitals, health networks, multicenter research trials, and patients.
     </p>
+    <p>General Features</p>
     <ul>
-      <li>Flexible integration to PACS, VNA, RIS, HIS or PHR</li>
+      <li>Flexible integration with PACS, VNA, RIS, HIS, or PHR</li>
       <li>Responsive user interface and work well on high DPI screens</li>
       <li>Web access through weasis protocol</li>
       <li>Multi-language support</li>
@@ -19,7 +20,9 @@
       <li>DICOM Send (storeSCU and STOW-RS)</li>
       <li>DICOM Query/Retrieve (C-GET, C-MOVE and WADO-URI) and DICOMWeb (QUERY and RETRIEVE)</li>
       <li>Dicomizer module (allow importing standard images and convert them in DICOM)</li>
+      <li>Embedded DICOM viewer in CD/DVD or other portable media</li>
     </ul>
+    <p>Viewer Features (see Tutorials from Help link below)</p>
   </description>
   <launchable type="desktop-id">io.github.nroduit.Weasis.desktop</launchable>
   <screenshots>
@@ -42,9 +45,14 @@
   <url type="help">https://nroduit.github.io/en/tutorials/</url>
   <url type="bugtracker">https://github.com/nroduit/Weasis/issues</url>
   <url type="homepage">https://nroduit.github.io</url>
+  <url type="faq">https://nroduit.github.io/en/faq/</url>
+  <url type="translate">https://nroduit.github.io/en/getting-started/translating/</url>
   <developer_name>nroduit</developer_name>
   <content_rating type="oars-1.1"/>
   <releases>
+    <release version="4.5.1" date="2024-09-18">
+      <description>https://github.com/nroduit/Weasis/releases/tag/v4.5.1</description>
+    </release>
     <release version="4.5.0" date="2024-08-15">
       <description>https://github.com/nroduit/Weasis/releases/tag/v4.5.0</description>
     </release>
