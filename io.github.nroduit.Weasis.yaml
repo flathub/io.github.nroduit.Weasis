@@ -1,11 +1,11 @@
 app-id: io.github.nroduit.Weasis
 runtime: org.freedesktop.Platform
-runtime-version: '23.08'
+runtime-version: '24.08'
 sdk: org.freedesktop.Sdk
 command: Weasis
 finish-args:
   - --share=ipc
-  - --socket=pulseaudio
+  - --socket=pipewire
   - --share=network
   - --socket=x11
   - --device=all
@@ -43,18 +43,17 @@ modules:
       - type: file
         path: io.github.nroduit.Weasis.Dicomizer.desktop
       - type: file
-        url: https://github.com/nroduit/Weasis/releases/download/v4.5.1/weasis-native.zip
-        sha256: 794e73875aeb84c4012142de27b5868a0b3ffe9a64aa26a97344b524c9a2cd87
+        url: https://github.com/nroduit/Weasis/releases/download/v4.6.0/weasis-native.zip
+        sha256: a3a73591274fe9f86bb520064355541423fbc68ef7218f98aa8110cb3cf722eb
       - type: file
         only-arches:
           - x86_64
-        url: https://github.com/adoptium/temurin22-binaries/releases/download/jdk-22.0.2%2B9/OpenJDK22U-jdk_x64_linux_hotspot_22.0.2_9.tar.gz
-        sha256: 05cd9359dacb1a1730f7c54f57e0fed47942a5292eb56a3a0ee6b13b87457a43
+        url: https://github.com/adoptium/temurin24-binaries/releases/download/jdk-24.0.1%2B9/OpenJDK24U-jdk_x64_linux_hotspot_24.0.1_9.tar.gz
+        sha256: 78832cb5ea4074f2215cde0d01d6192d09c87636fc24b36647aea61fb23b8272
         dest-filename: runtime-jdk.tar.gz
       - type: file
         only-arches:
           - aarch64
-        url: https://github.com/adoptium/temurin22-binaries/releases/download/jdk-22.0.2%2B9/OpenJDK22U-jdk_aarch64_linux_hotspot_22.0.2_9.tar.gz
+        url: https://github.com/adoptium/temurin24-binaries/releases/download/jdk-24.0.1%2B9/OpenJDK24U-jdk_aarch64_linux_hotspot_24.0.1_9.tar.gz
         dest-filename: runtime-jdk.tar.gz
-        sha256: dac62747b5158c4bf4c4636432e3bdb9dea47f80f0c9d1d007f19bd5483b7d29
-
+        sha256: a598260e340028d9b2383c23df16aa286769a661bd3bf28a52e8c1a5774b1110
