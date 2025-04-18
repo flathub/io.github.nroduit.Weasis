@@ -5,7 +5,7 @@ sdk: org.freedesktop.Sdk
 command: Weasis
 finish-args:
   - --share=ipc
-  - --socket=pipewire
+  - --socket=pulseaudio
   - --share=network
   - --socket=x11
   - --device=all
