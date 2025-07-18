@@ -59,62 +59,64 @@
   <url type="homepage">https://nroduit.github.io</url>
   <url type="faq">https://nroduit.github.io/en/faq/</url>
   <url type="translate">https://nroduit.github.io/en/getting-started/translating/</url>
-  <developer_name>nroduit</developer_name>
+  <developer  id="org.weasis">
+    <name>Nicolas Roduit</name>
+  </developer>
   <content_rating type="oars-1.1"/>
   <releases>
     <release version="4.6.2" date="2025-07-18">
-      <description>https://github.com/nroduit/Weasis/releases/tag/v4.6.2</description>
+      <url type="details">https://github.com/nroduit/Weasis/releases/tag/v4.6.2</url>
     </release>
     <release version="4.6.1" date="2025-06-04">
-      <description>https://github.com/nroduit/Weasis/releases/tag/v4.6.1</description>
+      <url type="details">https://github.com/nroduit/Weasis/releases/tag/v4.6.1</url>
     </release>
     <release version="4.6.0" date="2025-04-17">
-      <description>https://github.com/nroduit/Weasis/releases/tag/v4.6.0</description>
+      <url type="details">https://github.com/nroduit/Weasis/releases/tag/v4.6.0</url>
     </release>
     <release version="4.5.1" date="2024-09-18">
-      <description>https://github.com/nroduit/Weasis/releases/tag/v4.5.1</description>
+      <url type="details">https://github.com/nroduit/Weasis/releases/tag/v4.5.1</url>
     </release>
     <release version="4.5.0" date="2024-08-15">
-      <description>https://github.com/nroduit/Weasis/releases/tag/v4.5.0</description>
+      <url type="details">https://github.com/nroduit/Weasis/releases/tag/v4.5.0</url>
     </release>
     <release version="4.4.0" date="2024-05-06">
-      <description>https://github.com/nroduit/Weasis/releases/tag/v4.4.0</description>
+      <url type="details">https://github.com/nroduit/Weasis/releases/tag/v4.4.0</url>
     </release>
     <release version="4.3.0" date="2023-02-16">
-      <description>https://github.com/nroduit/Weasis/releases/tag/v4.3.0</description>
+      <url type="details">https://github.com/nroduit/Weasis/releases/tag/v4.3.0</url>
     </release>
     <release version="4.2.1" date="2023-11-11">
-      <description>https://github.com/nroduit/Weasis/releases/tag/v4.2.1</description>
+      <url type="details">https://github.com/nroduit/Weasis/releases/tag/v4.2.1</url>
     </release>
     <release version="4.2.0" date="2023-08-18">
-      <description>https://github.com/nroduit/Weasis/releases/tag/v4.2.0</description>
+      <url type="details">https://github.com/nroduit/Weasis/releases/tag/v4.2.0</url>
     </release>
     <release version="4.1.2" date="2023-06-16">
-      <description>https://github.com/nroduit/Weasis/releases/tag/v4.1.2</description>
+      <url type="details">https://github.com/nroduit/Weasis/releases/tag/v4.1.2</url>
     </release>
     <release version="4.1.1" date="2023-05-22">
-      <description>https://github.com/nroduit/Weasis/releases/tag/v4.1.1</description>
+      <url type="details">https://github.com/nroduit/Weasis/releases/tag/v4.1.1</url>
     </release>
     <release version="4.1.0" date="2023-05-08">
-      <description>https://github.com/nroduit/Weasis/releases/tag/v4.1.0</description>
+      <url type="details">https://github.com/nroduit/Weasis/releases/tag/v4.1.0</url>
     </release>
     <release version="4.0.3" date="2022-11-13">
-      <description>https://github.com/nroduit/Weasis/releases/tag/v4.0.3</description>
+      <url type="details">https://github.com/nroduit/Weasis/releases/tag/v4.0.3</url>
     </release>
     <release version="4.0.2" date="2022-08-01">
-      <description>https://github.com/nroduit/Weasis/releases/tag/v4.0.2</description>
+      <url type="details">https://github.com/nroduit/Weasis/releases/tag/v4.0.2</url>
     </release>
     <release version="4.0.1" date="2022-06-17">
-      <description>https://github.com/nroduit/Weasis/releases/tag/v4.0.1</description>
+      <url type="details">https://github.com/nroduit/Weasis/releases/tag/v4.0.1</url>
     </release>
     <release version="4.0.0-RC" date="2022-04-24">
-      <description>https://github.com/nroduit/Weasis/releases/tag/v4.0.0-rc</description>
+      <url type="details">https://github.com/nroduit/Weasis/releases/tag/v4.0.0-rc</url>
     </release>
     <release version="3.8.1" date="2022-02-03">
-      <description>https://github.com/nroduit/Weasis/releases/tag/v3.8.1</description>
+      <url type="details">https://github.com/nroduit/Weasis/releases/tag/v3.8.1</url>
     </release>
     <release version="3.8.0" date="2021-12-11">
-      <description>https://github.com/nroduit/Weasis/releases/tag/v3.8.0</description>
+      <url type="details">https://github.com/nroduit/Weasis/releases/tag/v3.8.0</url>
     </release>
   </releases>
 </component>
