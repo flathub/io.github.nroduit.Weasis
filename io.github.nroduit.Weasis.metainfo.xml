@@ -4,7 +4,7 @@
   <metadata_license>CC0-1.0</metadata_license>
   <project_license>EPL-2.0 OR Apache-2.0</project_license>
   <name>Weasis</name>
-  <summary>A free/libre/open medical DICOM viewer</summary>
+  <summary>Free medical DICOM viewer</summary>
   <description>
     <p>
       Weasis is a standalone and web-based software for visualizing images obtained from medical imaging devices. This free DICOM viewer is used in healthcare by hospitals, health networks, multicenter research trials, and patients.
@@ -15,8 +15,6 @@
       <li>Responsive user interface and work well on high DPI screens</li>
       <li>Web access through weasis protocol</li>
       <li>Multi-language support</li>
-      <li>Configuration of preferences on server-side and client-side</li>
-      <li>API for building custom plug-ins</li>
       <li>DICOM Send (storeSCU and STOW-RS)</li>
       <li>DICOM Query/Retrieve (C-GET, C-MOVE and WADO-URI) and DICOMWeb (QUERY and RETRIEVE)</li>
       <li>Dicomizer module (allow importing standard images and convert them in DICOM)</li>
@@ -25,21 +23,25 @@
     <p>Viewer Features (see Tutorials from Help link below)</p>
   </description>
   <launchable type="desktop-id">io.github.nroduit.Weasis.desktop</launchable>
+  <branding>
+    <color type="primary" scheme_preference="light">#4285f4</color>
+    <color type="primary" scheme_preference="dark">#1e3a8a</color>
+  </branding>
   <screenshots>
     <screenshot type="default">
-      <image>https://user-images.githubusercontent.com/993975/153709915-c352738e-3d51-4f12-bf12-7c3435c1b04a.PNG</image>
+      <image xml:lang="en">https://user-images.githubusercontent.com/993975/153709915-c352738e-3d51-4f12-bf12-7c3435c1b04a.PNG</image>
     </screenshot>
     <screenshot>
-      <image>https://nroduit.github.io/gallery1/Orthogonal%20Multiplanar%20Reconstruction_hu17a90ff4a4a7951b93c3445f4c19f25f_297734_1600x1200_fit_q75_box.jpg</image>
+      <image xml:lang="en">https://nroduit.github.io/gallery1/Orthogonal%20Multiplanar%20Reconstruction_hu17a90ff4a4a7951b93c3445f4c19f25f_297734_1600x1200_fit_q75_box.jpg</image>
     </screenshot>
     <screenshot>
-      <image>https://nroduit.github.io/gallery2/Dicomizer_hud68a0d3c1157621a03c7bb8b17566636_215735_1600x1200_fit_q75_box.jpg</image>
+      <image xml:lang="en">https://nroduit.github.io/gallery2/Dicomizer_hud68a0d3c1157621a03c7bb8b17566636_215735_1600x1200_fit_q75_box.jpg</image>
     </screenshot>
     <screenshot>
-      <image>https://nroduit.github.io/gallery2/Display%20DICOM%20Waveforms_huad5196becd6b89bdb393fb7a73e7a5b7_299358_1600x1200_fit_q75_box.jpg</image>
+      <image xml:lang="en">https://nroduit.github.io/gallery2/Display%20DICOM%20Waveforms_huad5196becd6b89bdb393fb7a73e7a5b7_299358_1600x1200_fit_q75_box.jpg</image>
     </screenshot>
     <screenshot>
-      <image>https://nroduit.github.io/gallery2/Display%20DICOM%20RT%20%28Radiotherapy%29_hua5e94e28ba1e708f741d02fa956d799b_212138_1600x1200_fit_q75_box.jpg</image>
+      <image xml:lang="en">https://nroduit.github.io/gallery2/Display%20DICOM%20RT%20%28Radiotherapy%29_hua5e94e28ba1e708f741d02fa956d799b_212138_1600x1200_fit_q75_box.jpg</image>
     </screenshot>
   </screenshots>
   <url type="help">https://nroduit.github.io/en/tutorials/</url>
