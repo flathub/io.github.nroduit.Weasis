@@ -1,15 +1,20 @@
 <?xml version="1.0" encoding="UTF-8"?>
+<!-- Copyright 2025 Weasis Teams -->
 <component type="desktop-application">
   <id>io.github.nroduit.Weasis</id>
   <metadata_license>CC0-1.0</metadata_license>
   <project_license>EPL-2.0 OR Apache-2.0</project_license>
   <name>Weasis</name>
   <summary>Free medical DICOM viewer</summary>
+  <categories>
+    <category>Science</category>
+    <category>Graphics</category>
+  </categories>
   <description>
     <p>
       Weasis is a standalone and web-based software for visualizing images obtained from medical imaging devices. This free DICOM viewer is used in healthcare by hospitals, health networks, multicenter research trials, and patients.
     </p>
-    <p>General Features</p>
+    <p>General Features:</p>
     <ul>
       <li>Flexible integration with PACS, VNA, RIS, HIS, or PHR</li>
       <li>Responsive user interface and work well on high DPI screens</li>
@@ -29,19 +34,24 @@
   </branding>
   <screenshots>
     <screenshot type="default">
-      <image xml:lang="en">https://user-images.githubusercontent.com/993975/153709915-c352738e-3d51-4f12-bf12-7c3435c1b04a.PNG</image>
+      <image>https://user-images.githubusercontent.com/993975/153709915-c352738e-3d51-4f12-bf12-7c3435c1b04a.PNG</image>
+      <caption>Main DICOM viewer interface showing medical image visualization</caption>
     </screenshot>
     <screenshot>
-      <image xml:lang="en">https://nroduit.github.io/gallery1/Orthogonal%20Multiplanar%20Reconstruction_hu17a90ff4a4a7951b93c3445f4c19f25f_297734_1600x1200_fit_q75_box.jpg</image>
+      <image>https://weasis.org/gallery1/Orthogonal%20Multiplanar%20Reconstruction_hu_f7ff19e7f1deaca8.jpg</image>
+      <caption>Orthogonal Multiplanar Reconstruction view for 3D medical imaging</caption>
     </screenshot>
     <screenshot>
-      <image xml:lang="en">https://nroduit.github.io/gallery2/Dicomizer_hud68a0d3c1157621a03c7bb8b17566636_215735_1600x1200_fit_q75_box.jpg</image>
+      <image>https://weasis.org/gallery2/Dicomizer_hu_45cdc783797831e6.jpg</image>
+      <caption>Dicomizer module for converting standard images to DICOM format</caption>
     </screenshot>
     <screenshot>
-      <image xml:lang="en">https://nroduit.github.io/gallery2/Display%20DICOM%20Waveforms_huad5196becd6b89bdb393fb7a73e7a5b7_299358_1600x1200_fit_q75_box.jpg</image>
+      <image>https://weasis.org/gallery2/Display%20DICOM%20Waveforms_hu_57983b073821a6ee.jpg</image>
+      <caption>DICOM Waveforms display for electrocardiogram and other medical signals</caption>
     </screenshot>
     <screenshot>
-      <image xml:lang="en">https://nroduit.github.io/gallery2/Display%20DICOM%20RT%20%28Radiotherapy%29_hua5e94e28ba1e708f741d02fa956d799b_212138_1600x1200_fit_q75_box.jpg</image>
+      <image>https://weasis.org/gallery2/Display%20DICOM%20RT%20%28Radiotherapy%29_hu_1a457ee5ebb9ad75.jpg</image>
+      <caption>Radiotherapy planning display with DICOM RT structures</caption>
     </screenshot>
   </screenshots>
   <url type="help">https://nroduit.github.io/en/tutorials/</url>
