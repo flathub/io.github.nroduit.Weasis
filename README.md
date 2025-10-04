@@ -1,9 +1,38 @@
-[Weasis](https://nroduit.github.io) is a free/libre/open multipurpose DICOM viewer with a highly modular architecture. It is a very popular clinical viewer used in healthcare by hospitals, health networks, multicenter research trials, and patients.
+[Weasis](https://nroduit.github.io) is a free/libre/open multipurpose DICOM viewer with a highly
+modular architecture. It is widely used in healthcare by hospitals, health networks, multicenter
+research trials, and patients.
 
-# Build the Flatpak package
+# Flatpak: Contributing Updates to Flathub
 
-## Install Flatpak Builder and tools
+This repository follows the Flathub contribution workflow using pull requests (PRs). All changes
+must be submitted as PRs and will be automatically built and tested by Flathub's CI system.
 
+## Making Changes
+
+1. Fork this repository
+2. Create a new branch for your changes
+3. Update the necessary files:
+    - Update version numbers and dependencies in `io.github.nroduit.Weasis.yaml`
+    - Add new release information in `io.github.nroduit.Weasis.metainfo.xml`, e.g.:
+   ```xml
+   <release version="4.0.0-RC" date="2022-04-24">
+     <description>https://github.com/nroduit/Weasis/releases/tag/v4.0.0-rc</description>
+   </release>
+   ```
+4. Create a pull request to the main branch
+
+## Local Testing (Optional)
+
+If you want to test your changes locally before submitting a PR:
+
+### Prerequisites
+
+- Flatpak and Flatpak Builder
+- Flathub remote repository
+
+### Install Build Tools
+
+On Debian-based systems, you can install Flatpak Builder with:
 ```bash
 sudo apt install flatpak-builder
 ```
@@ -12,36 +41,3 @@ flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flat
 ```
 
 See [building documentation](https://docs.flatpak.org/en/latest/building.html)
-
-
-## Update distribution
-
-### Add the new release information in io.github.nroduit.Weasis.yaml, e.g.   
-```xml
-<release version="4.0.0-RC" date="2022-04-24">
-  <description>https://github.com/nroduit/Weasis/releases/tag/v4.0.0-rc</description>
-</release>
-```
-
-### Build the image locally
-
-```bash
-flatpak-builder --user --arch x86_64 --force-clean --install-deps-from=flathub build io.github.nroduit.Weasis.yaml
-```
-
-## Using the Flathub repository
-
-To install applications that are hosted on Flathub, use the following:
-```
-flatpak remote-add flathub https://flathub.org/repo/flathub.flatpakrepo
-flatpak install flathub io.github.nroduit.Weasis
-```
-
-To install applications from the beta branch, use the following:
-```
-flatpak remote-add flathub-beta https://flathub.org/beta-repo/flathub-beta.flatpakrepo
-flatpak install flathub-beta io.github.nroduit.Weasis
-flatpak run io.github.nroduit.Weasis//beta
-```
-
-For more information and more applications see https://flathub.org 
