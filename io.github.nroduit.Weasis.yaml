@@ -44,8 +44,8 @@ modules:
       - type: file
         path: io.github.nroduit.Weasis.Dicomizer.desktop
       - type: file
-        url: https://github.com/nroduit/Weasis/releases/download/v4.6.4/weasis-native.zip
-        sha256: 739cb3ae353ee51a8d95e884099af435bd135892a5b4bec07937f15761fe371c
+        url: https://github.com/nroduit/Weasis/releases/download/v4.6.3/weasis-native.zip
+        sha256: 01568d7a4075458d132991db6416601748d2ee1bc6d9983368919674fc9746dc
       - type: file
         only-arches:
           - x86_64
