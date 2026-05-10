@@ -12,7 +12,8 @@
   </categories>
   <description>
     <p>
-      Weasis is a standalone and web-based software for visualizing images obtained from medical imaging devices. This free DICOM viewer is used in healthcare by hospitals, health networks, multicenter research trials, and patients.
+      Weasis is a standalone and web-based software for visualizing images obtained from medical imaging devices. 
+      This free DICOM viewer is used in healthcare by hospitals, health networks, multicenter research trials, and patients.
     </p>
     <p>General Features:</p>
     <ul>
@@ -54,9 +55,10 @@
       <caption>Radiotherapy planning display with DICOM RT structures</caption>
     </screenshot>
   </screenshots>
-  <url type="help">https://nroduit.github.io/en/tutorials/</url>
-  <url type="bugtracker">https://github.com/nroduit/Weasis/issues</url>
   <url type="homepage">https://nroduit.github.io</url>
+  <url type="bugtracker">https://github.com/nroduit/Weasis/issues</url>
+  <url type="vcs-browser">https://github.com/nroduit/Weasis</url>
+  <url type="help">https://nroduit.github.io/en/tutorials/</url>
   <url type="faq">https://nroduit.github.io/en/faq/</url>
   <url type="translate">https://nroduit.github.io/en/getting-started/translating/</url>
   <developer  id="org.weasis">
