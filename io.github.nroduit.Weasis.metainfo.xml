@@ -12,21 +12,45 @@
   </categories>
   <description>
     <p>
-      Weasis is a standalone and web-based software for visualizing images obtained from medical imaging devices. 
-      This free DICOM viewer is used in healthcare by hospitals, health networks, multicenter research trials, and patients.
+      An open-source DICOM viewer for standalone and web use, built for medical image
+      visualization in PACS and DICOM workflows — from routine reading to AI-assisted
+      review and quantitative imaging. It is used in healthcare by hospitals, health
+      networks, multicenter research trials, and patients.
     </p>
-    <p>General Features:</p>
+    <p>General features:</p>
     <ul>
-      <li>Flexible integration with PACS, VNA, RIS, HIS, or PHR</li>
-      <li>Responsive user interface and work well on high DPI screens</li>
-      <li>Web access through weasis protocol</li>
-      <li>Multi-language support</li>
-      <li>DICOM Send (storeSCU and STOW-RS)</li>
-      <li>DICOM Query/Retrieve (C-GET, C-MOVE and WADO-URI) and DICOMWeb (QUERY and RETRIEVE)</li>
-      <li>Dicomizer module (allow importing standard images and convert them in DICOM)</li>
-      <li>Embedded DICOM viewer in CD/DVD or other portable media</li>
+      <li>Open source under the EPL 2.0 or Apache 2.0 license</li>
+      <li>Integrates with PACS, VNA, RIS, HIS, or EHR</li>
+      <li>Desktop builds for Windows, macOS, and Linux; web access via the <code>weasis://</code> protocol</li>
+      <li>Responsive UI for high-DPI screens, with support for over 20 languages</li>
+      <li>Server- and client-side preference configuration with multi-level overrides</li>
+      <li>API for custom plug-ins; embeddable viewer for CD/DVD or portable media</li>
+      <li>The <em>Dicomizer</em> module converts images, videos, PDFs, and STL meshes into DICOM</li>
+      <li>AI-assisted and quantitative imaging workflows</li>
     </ul>
-    <p>Viewer Features (see Tutorials from Help link below)</p>
+    <p>Connectivity and interoperability:</p>
+    <p>
+      Weasis fits existing clinical infrastructure two ways: server-side via a gateway such
+      as ViewerHub (centralized brokering of PACS/DICOMweb, authentication, and manifests),
+      or client-side by configuring DICOM nodes and DICOMweb sources directly.
+    </p>
+    <ul>
+      <li><em>Classic DIMSE</em> — Query/Retrieve (C-FIND, C-GET, C-MOVE) and Store (C-STORE)</li>
+      <li><em>DICOMweb</em> — QIDO-RS, WADO-RS, and STOW-RS over HTTPS</li>
+      <li><em>WADO-URI</em> — for legacy PACS and the Weasis manifest flow</li>
+      <li><em>weasis:// protocol</em> — single-click launch from browsers, EHR, and RIS portals</li>
+      <li><em>Authentication</em> — Basic, OAuth 2.0, and OpenID Connect (Auth Code with PKCE, RFC 8252); works with Keycloak, Google Cloud Healthcare, or any OIDC provider</li>
+      <li><em>Send and export</em> — store to PACS or DICOMweb, or export locally as DICOMDIR ZIP, ISO with embedded viewer, JPEG, PNG, TIFF, AVI, or MP4</li>
+    </ul>
+    <p>Viewer features:</p>
+    <ul>
+      <li>Broad data-type support, including multi-frame, <em>Enhanced</em> CT/MR/US volumes, MPEG-2/4, SR, PR, KOS, SEG, RT, ECG, and Parametric Map; codecs include JPEG (baseline, extended, lossless), JPEG-LS, JPEG 2000, JPEG-XL, and RLE</li>
+      <li>Multi-monitor viewing with per-monitor calibration, HiDPI, and full-screen; customizable mouse and keyboard controls; Modality/VOI/Presentation LUTs and GSPS overlays</li>
+      <li>Advanced imaging: oblique MPR with gantry-tilt correction, MIP, 3D volume rendering with segmentation overlay, 4D/multi-phase splitting, cross-lines, 3D cursor, and side-by-side comparison layouts</li>
+      <li>Measurement and annotation: length, area, angle (including Cobb), free-shape, pixel-region statistics, histograms, and SUV measurement for PET/nuclear imaging</li>
+      <li>Dedicated viewers for ECG waveforms, structured reports (SR), audio (AU), and radiotherapy (RT structure set, dose, DVH)</li>
+      <li>Printing to DICOM and system printers, Key Object Selection, full DICOM attribute display and search, and <em>Acquire/Dicomizer</em> capture of non-DICOM media</li>
+    </ul>
   </description>
   <launchable type="desktop-id">io.github.nroduit.Weasis.desktop</launchable>
   <branding>
