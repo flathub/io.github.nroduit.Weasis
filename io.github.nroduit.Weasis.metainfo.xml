@@ -50,12 +50,16 @@
   </branding>
   <screenshots>
     <screenshot type="default">
-      <image>https://user-images.githubusercontent.com/993975/153709915-c352738e-3d51-4f12-bf12-7c3435c1b04a.PNG</image>
-      <caption>Main DICOM viewer interface showing medical image visualization</caption>
+      <image>https://raw.githubusercontent.com/nroduit/Weasis/v4.7.0/weasis.jpg</image>
+      <caption>Multiplanar reconstruction and 3D volume rendering of a CT study</caption>
     </screenshot>
     <screenshot>
-      <image>https://weasis.org/gallery1/Orthogonal%20Multiplanar%20Reconstruction_hu_f7ff19e7f1deaca8.jpg</image>
-      <caption>Orthogonal Multiplanar Reconstruction view for 3D medical imaging</caption>
+      <video container="webm" codec="vp9" width="1280" height="720">https://weasis.org/videos/weasis-demo.webm</video>
+      <caption>Overview of the Weasis DICOM viewer</caption>
+    </screenshot>
+    <screenshot>
+      <image>https://user-images.githubusercontent.com/993975/153709915-c352738e-3d51-4f12-bf12-7c3435c1b04a.PNG</image>
+      <caption>Main DICOM viewer interface showing medical image visualization</caption>
     </screenshot>
     <screenshot>
       <image>https://weasis.org/gallery2/Dicomizer_hu_45cdc783797831e6.jpg</image>
