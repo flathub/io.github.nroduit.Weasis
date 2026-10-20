@@ -12,6 +12,13 @@ finish-args:
   - --filesystem=host
   - --filesystem=/tmp
   - --env=PATH=/app/bin:/usr/bin
+  # The runtime only ships the C, C.utf8 and a few *.utf8 locales. When the host
+  # locale is not among them (e.g. es_EC.UTF-8), glibc falls back to the C locale,
+  # so the JDK sets sun.jnu.encoding to ANSI_X3.4-1968 and mangles every non-ASCII
+  # byte in argv and in file names. Weasis takes its UI language and number/date
+  # formats from its own preferences, not from the environment, so pinning a UTF-8
+  # codeset here costs no localisation.
+  - --env=LC_ALL=C.UTF-8
 x-lint-config:
   suppress:
     - finish-args-host-filesystem-access
