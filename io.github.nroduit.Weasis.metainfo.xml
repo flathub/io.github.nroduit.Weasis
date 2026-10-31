@@ -62,15 +62,15 @@
       <caption>Main DICOM viewer interface showing medical image visualization</caption>
     </screenshot>
     <screenshot>
-      <image>https://weasis.org/gallery2/Dicomizer_hu_45cdc783797831e6.jpg</image>
+      <image>https://raw.githubusercontent.com/flathub/io.github.nroduit.Weasis/dc7941316a78b1b01fd7323c92dd6c2d50bc6360/screenshots/dicomizer.png</image>
       <caption>Dicomizer module for converting standard images to DICOM format</caption>
     </screenshot>
     <screenshot>
-      <image>https://weasis.org/gallery2/Display%20DICOM%20Waveforms_hu_57983b073821a6ee.jpg</image>
+      <image>https://raw.githubusercontent.com/flathub/io.github.nroduit.Weasis/dc7941316a78b1b01fd7323c92dd6c2d50bc6360/screenshots/dicom-waveforms.png</image>
       <caption>DICOM Waveforms display for electrocardiogram and other medical signals</caption>
     </screenshot>
     <screenshot>
-      <image>https://weasis.org/gallery2/Display%20DICOM%20RT%20%28Radiotherapy%29_hu_1a457ee5ebb9ad75.jpg</image>
+      <image>https://raw.githubusercontent.com/flathub/io.github.nroduit.Weasis/dc7941316a78b1b01fd7323c92dd6c2d50bc6360/screenshots/dicom-rt.png</image>
       <caption>Radiotherapy planning display with DICOM RT structures</caption>
     </screenshot>
   </screenshots>
@@ -85,6 +85,9 @@
   </developer>
   <content_rating type="oars-1.1"/>
   <releases>
+    <release version="4.8.0" date="2026-10-31">
+      <url type="details">https://github.com/nroduit/Weasis/releases/tag/v4.8.0</url>
+    </release>
     <release version="4.7.3" date="2026-08-25">
       <url type="details">https://github.com/nroduit/Weasis/releases/tag/v4.7.3</url>
     </release>
