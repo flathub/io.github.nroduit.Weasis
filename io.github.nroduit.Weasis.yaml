@@ -12,6 +12,7 @@ finish-args:
   - --filesystem=host
   - --filesystem=/tmp
   - --env=PATH=/app/bin:/usr/bin
+  - --env=FONTCONFIG_FILE=/app/etc/fonts/weasis-fonts.conf
 x-lint-config:
   suppress:
     - finish-args-host-filesystem-access
@@ -32,6 +33,7 @@ modules:
       - install -D -t /app/share/applications/ io.github.nroduit.Weasis.desktop
       - install -D -t /app/share/applications/ io.github.nroduit.Weasis.Dicomizer.desktop
       - install -D -t /app/share/metainfo/ io.github.nroduit.Weasis.metainfo.xml
+      - install -D -m644 weasis-fonts.conf /app/etc/fonts/weasis-fonts.conf
     sources:
       - type: file
         path: io.github.nroduit.Weasis.desktop
@@ -43,6 +45,8 @@ modules:
         path: dicomizer.svg
       - type: file
         path: io.github.nroduit.Weasis.Dicomizer.desktop
+      - type: file
+        path: weasis-fonts.conf
       - type: file
         url: https://github.com/nroduit/Weasis/releases/download/v4.8.0/weasis-native.zip
         sha256: d63a0adeafc9593f5edd571a63c70c1289211d576fc90324363e806b7a6b261c
